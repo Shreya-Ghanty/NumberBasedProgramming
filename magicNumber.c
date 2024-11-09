@@ -13,16 +13,16 @@ int main() {
     int num;
     printf("Enter a number: ");
     scanf("%d", &num);
+    int fnum = num;
 
-    int sum = sumDigits(num);
-    while (sum >= 10) {
-        sum = sumDigits(sum);
+    while (num >= 10) {
+        num = sumDigits(num);
     }
 
-    if (sum == 1 && num % sum == 0)
-        printf("%d is a Harshad Magic Number.\n", num);
+    if (num == 1)
+        printf("%d is a Magic Number.\n", fnum);
     else
-        printf("%d is not a Harshad Magic Number.\n", num);
+        printf("%d is not a Magic Number.\n", fnum);
 
     return 0;
 }
